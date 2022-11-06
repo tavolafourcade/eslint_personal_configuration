@@ -1,15 +1,15 @@
-import { useState } from 'react'
+import React, { useState } from 'react'
 
-function App() {
+function App () {
   const [todos, setTodos] = useState([])
 
   const handleAddTodo = (e) => {
     e.preventDefault()
-    const text = e.target["text"].value
+    const text = e.target.text.value
 
-    if(!text || todos.includes(text)) return
+    if (!text || todos.includes(text)) return
     setTodos(todos => todos.concat(text))
-    e.target["text"].value = ""
+    e.target.text.value = ''
   }
 
   const handleRemoveTodo = (index) => {
