@@ -1,3 +1,1 @@
-describe('Dummy test', () => {
-
-})
+describe('Dummy test', () => {})
