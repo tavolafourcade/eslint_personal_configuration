@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import './App.css'
 
 function App() {
   const [todos, setTodos] = useState([])
@@ -10,6 +9,7 @@ function App() {
 
     if(!text || todos.includes(text)) return
     setTodos(todos => todos.concat(text))
+    e.target["text"].value = ""
   }
 
   const handleRemoveTodo = (index) => {
